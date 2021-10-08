@@ -1,0 +1,6 @@
+<h2>Please, Log in</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="email" formControlName="email" placeholder="email"> <br>
+  <input type="password" formControlName="password" placeholder="password"> <br>
+  <button type="submit">Log in</button>
+</form>

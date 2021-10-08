@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  loggedIn!: boolean;
+  constructor(private userService: UserService) {
+  }
+  ngOnInit(): void {
+    this.userService.isUserLoggedIn().subscribe(
+      status => this.loggedIn = status
+    );
+    console.log('isLogged', this.loggedIn);
+  }
+
+  logout(): void {
+    this.userService.logout();
+  }
 }
