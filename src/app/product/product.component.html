@@ -10,11 +10,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let products of product; index as i">
+      <tr *ngFor="let product of products; index as i">
         <th scope="row">{{i+1}}</th>
-        <td>{{products.name}}</td>
-        <td>{{products.description}}</td>
-        <td>{{products.price}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="delete(product)">Delete</button></td>
       </tr>
     </tbody>
 </table>

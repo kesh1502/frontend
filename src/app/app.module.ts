@@ -14,8 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { AsideComponent } from './aside/aside.component';
 import { ProductComponent } from './product/product.component';
-
 import { EditproductComponent } from './editproduct/editproduct.component';
+import { CreateproductComponent } from './product/createproduct/createproduct.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { EditproductComponent } from './editproduct/editproduct.component';
     NavComponent,
     AsideComponent,
     ProductComponent,
- 
+    CreateproductComponent,
     EditproductComponent
   ],
   imports: [

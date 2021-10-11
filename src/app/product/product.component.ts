@@ -10,7 +10,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class ProductComponent implements OnInit {
 
-  public product = [] as any;
+  public products = [] as any;
   public selectedProduct = <IProduct>{};
   public btnTitle = '';
   public name = new FormControl('',Validators.required);
@@ -28,12 +28,11 @@ export class ProductComponent implements OnInit {
 
   getList(){
     this.service.list()
-      .subscribe(response => this.product = response);
+      .subscribe(response => this.products = response);
   }
 
   delete(product:IProduct){
-    this.service.delete(product)
-      .subscribe(response => this.getList());
+    this.service.delete(product).subscribe(response => this.getList());
   }
 
   save(){
