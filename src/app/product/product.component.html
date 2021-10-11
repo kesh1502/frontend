@@ -3,10 +3,10 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Description</th>
-        <th scope="col">Price</th>
-        <th scope="col">Action</th>
+        <th scope="col">Name:</th>
+        <th scope="col">Description:</th>
+        <th scope="col">Price:</th>
+        <th scope="col">Action:</th>
       </tr>
     </thead>
     <tbody>
@@ -16,7 +16,9 @@
         <td>{{product.description}}</td>
         <td>{{product.price}}</td>
         <td>
-          <button type="button" class="btn btn-danger" (click)="delete(product)">Delete</button></td>
+          <button type="button" class="btn btn-delete" (click)="delete(product)">Delete</button>
+          <button type="button" class="btn btn-update" (click)="update()">Edit</button>
+        </td>
       </tr>
     </tbody>
 </table>

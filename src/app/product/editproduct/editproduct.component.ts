@@ -4,14 +4,14 @@ import { IProduct } from "c:/xampp/htdocs/Angular/frontend/src/app/product/produ
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-@Component({
-  selector: 'app-createproduct',
-  templateUrl: './createproduct.component.html',
-  styleUrls: ['./createproduct.component.css']
-})
-export class CreateproductComponent implements OnInit {
 
-    public products = [] as any;
+@Component({
+  selector: 'app-editproduct',
+  templateUrl: './editproduct.component.html',
+  styleUrls: ['./editproduct.component.css']
+})
+export class EditproductComponent implements OnInit {
+  public products = [] as any;
     public selectedProduct = <IProduct>{};
     public modalTitle = '';
     public btnTitle = '';
@@ -37,17 +37,16 @@ export class CreateproductComponent implements OnInit {
           .subscribe(response => this.getList());
       }
     
-      save(){
+      update(){
         if(!this.name.value || !this.description.value || !this.price.value){
           this.showError = true;
           return;
         }
-
+        
         this.selectedProduct.name = this.name.value;
         this.selectedProduct.description = this.description.value;
         this.selectedProduct.price = this.price.value;
         this.service.add(this.selectedProduct) .subscribe(response => this.products = response);
-        
     
       }
     

@@ -2,6 +2,7 @@
 <nav>
     <h2><a routerLink="/login" *ngIf="!loggedIn">Log in</a></h2>
     <h2><a routerLink="/loggedout" *ngIf="loggedIn" (click)="logout()">Log out</a></h2>
+    <h2 *ngIf="loggedIn" >User: {{user.first_name}} {{user.last_name}}</h2>
 </nav>
 </header>
   

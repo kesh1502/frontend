@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { IProduct } from './product.module';
 import { FormControl, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -60,6 +61,15 @@ export class ProductComponent implements OnInit {
           this.showError = false;
         });
     }
+  }
+
+  update(){
+    this.service.update(this.selectedProduct)
+      .subscribe(response=>{
+        this.getList();
+        this.reset();
+        this.showError = false;
+      });
   }
 
   reset(){

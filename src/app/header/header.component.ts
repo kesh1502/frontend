@@ -7,7 +7,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+ user:any;
   loggedIn!: boolean;
   constructor(private userService: UserService) {
   }
