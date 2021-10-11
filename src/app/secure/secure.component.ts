@@ -18,7 +18,7 @@ export class SecureComponent implements OnInit {
       Authorization: `Bearer ${localStorage.getItem('token')}`
     });
     console.log(localStorage.getItem('token'));
-    this.http.get('http://localhost:8000/user', {headers}).subscribe(
+    this.http.get('http://localhost:8000/api/user', {headers}).subscribe(
       result => this.user = result,
       error => {
         this.userService.logout();
