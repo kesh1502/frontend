@@ -9,13 +9,21 @@ import { SecureComponent } from './secure/secure.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LoggedoutComponent } from './loggedout/loggedout.component';
 import { RegisterComponent } from './register/register.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './nav/nav.component';
+import { AsideComponent } from './aside/aside.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SecureComponent,
     LoggedoutComponent,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    AsideComponent
   ],
   imports: [
     BrowserModule,

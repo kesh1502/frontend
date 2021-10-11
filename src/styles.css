@@ -1,1 +1,166 @@
+/* 
+// CSS3 Flexbox Holy Grail Layout
+// Made with ❤ by @ImDigamberSingh
+// https://www.positronx.io
+*/
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/css/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+* {
+    box-sizing: border-box;
+  }
+
+  #products {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: sans-serif;
+  }
+  
+  .container {
+    display:flex;
+    flex-flow:row wrap;
+  }
+
+  * You can add global styles to this file, and also import other style files */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1 {
+    color: #264D73;
+    font-size: 2.5rem;
+  }
+  h2, h3 {
+    color: #444;
+    font-weight: lighter;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+ 
+  body, input[text] {
+    color: #333;
+    font-family: Cambria, Georgia, serif;
+  }
+  a {
+    cursor: pointer;
+  }
+  button {
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
+  
+  app-header, 
+  app-nav, 
+  app-product-list,
+  app-blog-list,
+  app-createproduct, 
+  app-editproduct,
+  app-aside, 
+  app-footer,
+  app-login,
+  app-loggedout,
+  app-register,
+  app-secure {
+    padding: 20px;
+  }
+  
+  app-header {
+    order:1;
+    height:100px;
+    flex:0 1 100%;
+    background: #797878;
+  }
+  
+  app-nav {
+    order:2;
+    flex: 0 1 200px;
+    background: rgb(193, 191, 196);
+  }
+  
+  app-product-list,
+  app-blog-list,
+  app-createproduct,
+  app-editproduct,
+  app-login,
+  app-loggedout,
+  app-register,
+  app-secure{
+    order:3;
+    flex: 1;
+    min-height:850px;
+    background: rgb(248, 248, 248);
+    align-items: center;
+    padding: 50px;
+  }
+  
+  app-aside {
+    order:4;
+    flex:0 1 200px;
+    background: rgb(149, 180, 216);
+  }
+  
+  app-footer {
+    order:5;
+    height:100px;
+    flex:0 1 100%;
+    background: rgb(119, 120, 121);
+  }
+
+  .center {
+    padding: .5rem;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    app-header, 
+    app-nav, 
+    app-product-list,
+    app-createproduct,
+    app-editproduct,
+    app-blog-list,
+    app-aside, 
+    app-footer,
+    app-login,
+    app-loggedout,
+    app-register,
+    app-secure {
+      flex: unset;
+      width: 100%;
+    }
+  }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
