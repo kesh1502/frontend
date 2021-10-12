@@ -14,6 +14,9 @@ export class SecureComponent implements OnInit {
   constructor(private http: HttpClient,private userService: UserService,private router: Router,private nav: navService) { }
 
   ngOnInit(): void {
+    this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['Your actualComponent']);
+     });
     const headers = new HttpHeaders({
       Authorization: `Bearer ${localStorage.getItem('token')}`
     });
@@ -26,4 +29,4 @@ export class SecureComponent implements OnInit {
       }
     );
   }
-}
+} 

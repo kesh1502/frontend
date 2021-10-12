@@ -1,8 +1,11 @@
 table {
     table-layout: fixed;
-    width: 100%;
+    width: 80%;
+    height: 2px;
     border-collapse: collapse;
-    border: 3px solid purple;
+    border: 2px solid rgba(31, 30, 43, 0.719);
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   thead th:nth-child(1) {
@@ -26,8 +29,7 @@ table {
   }
   
   th, td {
-    padding: 10px;
-    border: 2px solid purple;
+    border: 2px solid rgba(31, 30, 43, 0.719);
   }
 
   

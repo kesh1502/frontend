@@ -53,17 +53,17 @@
   button {
     background-color: rgb(0, 0, 0);
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
     color: white;
     font-size: 1.2rem;
     padding: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
   button:hover {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
   }
   button:disabled {
@@ -121,7 +121,7 @@
   app-secure{
     order:3;
     flex: 1;
-    min-height:850px;
+    min-height:841px;
     background: rgb(248, 248, 248);
     align-items: center;
     padding: 50px;
@@ -179,6 +179,40 @@
   input:focus {
     background-color: rgb(200, 225, 233);
   }
+
+  /* Float four columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  padding: 0 10px 20px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
 
 
 html, body { height: 100%; }

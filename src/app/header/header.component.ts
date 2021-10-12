@@ -8,27 +8,25 @@ import { navService } from '../nav/nav.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  user:any;
-  loggedIn: boolean|undefined;
+   user:any;
+  loggedIn!: boolean;
   toggleActive!: boolean;
-
-  constructor(private userService: UserService,private sidenav: navService) { }
-
+  constructor(private userService: UserService,private sidenav: navService) {}
+  
   ngOnInit(): void {
     this.userService.isUserLoggedIn().subscribe(
       status => this.loggedIn = status
     );
     console.log('isLogged', this.loggedIn);
   }
-  
-  toggleRightSidenav() {
-    console.log('Clicked');
-    this.toggleActive = !this.toggleActive;
-		this.sidenav.toggle();
-}
 
   logout(): void {
     this.userService.logout();
   }
 
+  toggleRightSidenav() {
+    console.log('Clicked');
+    this.toggleActive = !this.toggleActive;
+		this.sidenav.toggle();
+}
 }

@@ -1,28 +1,17 @@
-<mat-sidenav #rightSidenav mode="side"  class="rightSidenav"
-			 [fixedInViewport]="true" [fixedTopGap]="90">
-	
-	<mat-accordion>
+<mat-sidenav #rightSidenav mode="side"  class="rightSidenav" [fixedInViewport]="true" [fixedTopGap]="100">
+	<br>
+	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:darkkhaki;" routerLink="/products"> View Products</h1>
+	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:darkkhaki;" routerLink="/products/create"> Create Product</h1>
+	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:darkkhaki;" routerLink="/editproduct"> Edit Product</h1>
+	<mat-accordion style="height:100px;">
 		<mat-expansion-panel >
-			<mat-expansion-panel-header>
+			<mat-expansion-panel-header style="height:100px;">
 				<mat-panel-title>
-				Main Menu
+					<p style="color: rgb(219, 221, 223); font-style: italic; font-size: 18px;">{{user.first_name}} {{user.last_name}}</p>
 				</mat-panel-title>
-				<mat-panel-description>
-					Currently I am 
-				</mat-panel-description>
 			</mat-expansion-panel-header>
-			<p style="color: cadetblue; font-style: italic;">User: {{user.first_name}} {{user.last_name}}</p>
+			<hr>
+			<h1 style="font-size: 15px; font-family:Georgia, 'Times New Roman', Times, serif; color:rgb(231, 238, 213);" routerLink="/loggedout"> Log Out</h1>
 		</mat-expansion-panel>
-		<mat-panel-title>
-			<a style=" font-size: 15px; font-family: 'Times New Roman', Times, serif; color: aliceblue; margin-right:50px ;" routerLink="/products">View Products</a>
-		</mat-panel-title>
-		<mat-panel-title>
-			<a routerLink="/products/create">Create Product</a>
-		</mat-panel-title>
-		<mat-panel-title>
-			<a routerLink="/editproduct"> Edit Product</a>
-		</mat-panel-title>
 	</mat-accordion>
-	
-	
 </mat-sidenav>
