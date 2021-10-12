@@ -1,8 +1,13 @@
 <header>
-<nav>
-    <h2><a routerLink="/login" *ngIf="!loggedIn">Log in</a></h2>
-    <h2><a routerLink="/loggedout" *ngIf="loggedIn" (click)="logout()">Log out</a></h2>
-    <h2 *ngIf="loggedIn" >User: {{user.first_name}} {{user.last_name}}</h2>
-</nav>
+    <nav>
+        <mat-toolbar class="header fixed">
+            <mat-toolbar-row class="toolbar-row">
+                <button [class.active]="toggleActive" (click)="toggleRightSidenav()" class="rightSidenav_toggle"> Main Menu	</button>
+                <h2><a routerLink="/"  *ngIf="!loggedIn">>Log in</a></h2>
+                <h2><a routerLink="/loggedout" (click)="logout()">Log out</a></h2>
+                <h2><a routerLink="/loggedout" *ngIf="loggedIn" (click)="logout()">Log out</a></h2>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </nav>
 </header>
   

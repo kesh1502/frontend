@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { navService } from './nav.service';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('nav', { static: true })
+  public nav!: MatSidenav;
 
-  ngOnInit(): void {
-  }
+	constructor(private NavService: navService) {	}
+
+	ngOnInit(): void {
+    console.log("SSS"+ this.nav);
+		this.NavService.setSidenav(this.nav);
+	}
 
 }

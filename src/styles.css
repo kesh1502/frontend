@@ -106,7 +106,7 @@
   
   app-nav {
     order:2;
-    flex: 0 1 200px;
+    flex: 0 0.5 2px;
     background: rgb(193, 191, 196);
   }
   

@@ -10,7 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { SecureComponent } from './secure/secure.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'loggedout', component: LoggedoutComponent},
   {path: 'secure', component: SecureComponent},
   {path: 'register', component: RegisterComponent},

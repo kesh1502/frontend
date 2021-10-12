@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Subject} from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,7 @@ export class UserService {
     localStorage.removeItem('token');
     this.loggedChanged.next(false);
   }
+
   isUserLoggedIn(): Subject<boolean> {
     return this.loggedChanged;
   }
