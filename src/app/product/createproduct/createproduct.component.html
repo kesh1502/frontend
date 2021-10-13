@@ -1,6 +1,9 @@
+<div class="notlogged" *ngIf="!loggedIn">
+    <h1 routerLink="/">Login to access the product page</h1>
+</div>
 
-<h1>Create Product</h1>
-<div class="create-body">
+<div class="create-body" *ngIf="loggedIn">
+    <h1>Create Product</h1>
     <div class="form-group">
         <label for="exampleInputEmail1"></label>
         <input type="text" class="form-control"  placeholder="Enter Product Name:" [formControl]="name">

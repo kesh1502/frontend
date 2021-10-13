@@ -9,3 +9,8 @@ h1:hover{
     font-family: 'Times New Roman', Times, serif;
     color: aliceblue;
 }
+
+.mat-body p, .mat-body-1 p, .mat-typography p{
+    margin: 0 0  0px;
+
+}

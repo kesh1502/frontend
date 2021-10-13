@@ -9,7 +9,7 @@ import { navService } from '../nav/nav.service';
 })
 export class HeaderComponent implements OnInit {
    user:any;
-  loggedIn!: boolean;
+  loggedIn: boolean=true;
   toggleActive!: boolean;
   constructor(private userService: UserService,private sidenav: navService) {}
   

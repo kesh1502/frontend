@@ -1,8 +1,11 @@
-<br>
-<table class="table">
+<div class="notlogged" *ngIf="!loggedIn">
+  <h1 routerLink="/">Login to access the product page</h1>
+</div>
+
+<table  *ngIf="loggedIn" class="table">
     <thead>
       <tr>
-        <th  scope="col">#</th>
+        <th scope="col">#</th>
         <th scope="col">Name:</th>
         <th scope="col">Description:</th>
         <th scope="col">Price:</th>
@@ -22,3 +25,4 @@
       </tr>
     </tbody>
 </table>
+

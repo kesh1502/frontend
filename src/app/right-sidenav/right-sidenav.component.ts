@@ -5,14 +5,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-right-sidenav',
   templateUrl: './right-sidenav.component.html',
   styleUrls: ['./right-sidenav.component.css']
 })
-
-
 
 export class RightSidenavComponent implements OnInit {
 	
@@ -22,7 +19,6 @@ export class RightSidenavComponent implements OnInit {
  
   @Input()
   openNav!: boolean;
- 
   constructor(private http: HttpClient,private userService: UserService,private router: Router,private nav: navService) { }
  
    ngOnInit(): void {
@@ -39,6 +35,8 @@ export class RightSidenavComponent implements OnInit {
        }
      );
    }
+
+   logout(): void {
+    this.userService.logout();
+  }
  }
- 
- 

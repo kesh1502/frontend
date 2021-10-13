@@ -3,6 +3,7 @@ import { ProductService } from '../product.service';
 import { IProduct } from './product.module';
 import { FormControl, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-product',
@@ -18,18 +19,21 @@ export class ProductComponent implements OnInit {
   public description = new FormControl('',Validators.required);
   public price = new FormControl('',Validators.required);
   public showError = false;
+  loggedIn: boolean=true;
 
-  constructor(private service:ProductService,) { }
-
-
+  constructor(private service:ProductService,private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.isUserLoggedIn().subscribe(
+      status => this.loggedIn = status
+    );
+    console.log('isLogged', this.loggedIn);
+  
     this.getList();
   }
 
   getList(){
-    this.service.list()
-      .subscribe(response => this.products = response);
+    this.service.list().subscribe(response => this.products = response);
   }
 
   delete(product:IProduct){
@@ -45,22 +49,6 @@ export class ProductComponent implements OnInit {
     this.selectedProduct.name = this.name.value;
     this.selectedProduct.description = this.description.value;
     this.selectedProduct.price = this.price.value;
-
-    if(this.btnTitle == 'Update'){
-      this.service.update(this.selectedProduct)
-        .subscribe(response=>{
-          this.getList();
-          this.reset();
-          this.showError = false;
-        });
-    }else{
-      this.service.add(this.selectedProduct)
-        .subscribe(response=>{
-          this.getList();
-          this.reset();
-          this.showError = false;
-        });
-    }
   }
 
   update(){

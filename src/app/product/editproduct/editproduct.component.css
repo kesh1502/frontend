@@ -1,0 +1,38 @@
+table {
+    table-layout: auto;
+    width: 80%;
+    border-collapse: collapse;
+    border: 2px solid rgba(31, 30, 43, 0.719);
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    justify-content: center;
+  }
+
+  
+  
+  thead th:nth-child(1) {
+    width: 5%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 25%;
+  }
+  
+  thead th:nth-child(5) {
+    width: 25%;
+  }
+  
+  th, td {
+    border: 2px solid rgba(31, 30, 43, 0.719);
+  }
+
+  

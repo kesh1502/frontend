@@ -1,8 +1,9 @@
-<mat-sidenav #rightSidenav mode="side"  class="rightSidenav" [fixedInViewport]="true" [fixedTopGap]="100">
+<mat-sidenav #rightSidenav mode="side"  class="rightSidenav" [fixedInViewport]="true" [fixedTopGap]="100" style="color: black;">
 	<br>
-	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:darkkhaki;" routerLink="/products"> View Products</h1>
-	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:darkkhaki;" routerLink="/products/create"> Create Product</h1>
-	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:darkkhaki;" routerLink="/editproduct"> Edit Product</h1>
+	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:#b18976;" routerLink="/secure"> Home</h1>
+	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:#d1a28c;" routerLink="/products"> View Products</h1>
+	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:#d1a28c;" routerLink="/products/create"> Create Product</h1>
+	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:#d1a28c;" routerLink="/products/edit"> Edit Product</h1>
 	<mat-accordion style="height:100px;">
 		<mat-expansion-panel >
 			<mat-expansion-panel-header style="height:100px;">
@@ -11,7 +12,7 @@
 				</mat-panel-title>
 			</mat-expansion-panel-header>
 			<hr>
-			<h1 style="font-size: 15px; font-family:Georgia, 'Times New Roman', Times, serif; color:rgb(231, 238, 213);" routerLink="/loggedout"> Log Out</h1>
+			<h1 style="font-size: 15px; font-family:Georgia, 'Times New Roman', Times, serif; color:rgb(231, 238, 213);" routerLink="/" (click)="logout()"> Log Out</h1>
 		</mat-expansion-panel>
 	</mat-accordion>
 </mat-sidenav>

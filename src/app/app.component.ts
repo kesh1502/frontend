@@ -8,7 +8,7 @@ import {UserService} from './user.service';
 })
 export class AppComponent {
   title = 'frontend';
-  loggedIn!: boolean;
+  public loggedIn!: boolean;
   constructor(private userService: UserService) {
   }
   

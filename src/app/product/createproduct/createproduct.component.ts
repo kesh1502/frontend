@@ -4,6 +4,7 @@ import { IProduct } from "c:/xampp/htdocs/Angular/frontend/src/app/product/produ
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserService } from 'src/app/user.service';
 @Component({
   selector: 'app-createproduct',
   templateUrl: './createproduct.component.html',
@@ -19,10 +20,19 @@ export class CreateproductComponent implements OnInit {
     public description = new FormControl('',Validators.required);
     public price = new FormControl('',Validators.required);
     public showError = false;
+    loggedIn: boolean= true ;
   
-    constructor(private service: ProductService,private fb: FormBuilder,private http: HttpClient) { }
+    constructor(private service: ProductService,private userService: UserService,private fb: FormBuilder,private http: HttpClient) { }
 
     ngOnInit(): void {
+      this.userService.isUserLoggedIn().subscribe(
+
+        status => this.loggedIn = status
+      );
+     
+  
+   
+      console.log('isLogged', this.loggedIn);
         this.getList();
       }
 

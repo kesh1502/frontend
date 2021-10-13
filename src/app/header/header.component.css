@@ -1,0 +1,11 @@
+a{
+    color: aliceblue;
+}
+
+.header-fixed{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 10;
+    width: 100%;
+}

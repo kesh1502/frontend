@@ -12,8 +12,8 @@ import {UserService} from '../user.service';
 })
 export class LoginComponent {
  
- 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router , private userService: UserService) { }
+  
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private userService: UserService) { }
 
   form = this.fb.group({
     email: '',
