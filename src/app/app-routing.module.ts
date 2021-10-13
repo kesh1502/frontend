@@ -9,10 +9,11 @@ import { EditproductComponent } from './product/editproduct/editproduct.componen
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
 import { SecureComponent } from './secure/secure.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'loggedout', component: LoggedoutComponent},
+  {path: 'loggedout', component: LoggedoutComponent, canActivate: [AuthGuard]},
   {path: 'secure', component: SecureComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'products', component: ProductComponent},

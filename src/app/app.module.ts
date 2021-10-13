@@ -22,6 +22,13 @@ import { RightSidenavComponent } from './right-sidenav/right-sidenav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { navService } from './nav/nav.service';
 
+// Auth service
+import { AuthService } from "./auth.service";
+
+// Import canActivate guards
+import { AuthGuard } from "./auth.guard";
+import { SecureInnerPagesGuard } from "./secure-inner-pages.guard";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +54,7 @@ import { navService } from './nav/nav.service';
     CdkTableModule,
     MaterialModule
   ],
-  providers: [navService],
+  providers: [navService,AuthService, AuthGuard, SecureInnerPagesGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
