@@ -10,23 +10,14 @@ import { navService } from '../nav/nav.service';
 })
 export class SecureComponent implements OnInit {
   user:any;
+  loggedIn: boolean= true;
 
   constructor(private http: HttpClient,private userService: UserService,private router: Router,private nav: navService) { }
 
   ngOnInit(): void {
-    this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['Your actualComponent']);
-     });
-    const headers = new HttpHeaders({
-      Authorization: `Bearer ${localStorage.getItem('token')}`
-    });
-    console.log(localStorage.getItem('token'));
-    this.http.get('http://localhost:8000/api/user', {headers}).subscribe(
-      result => this.user = result,
-      error => {
-        this.userService.logout();
-        this.router.navigate(['/login']);
-      }
+    this.userService.isUserLoggedIn().subscribe(
+      status => this.loggedIn = status
     );
-  }
-} 
+    console.log('isLogged', this.loggedIn);
+ }
+}

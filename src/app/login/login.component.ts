@@ -36,6 +36,7 @@ export class LoginComponent {
         //localStorage.setItem('token', result.access_token);
         this.userService.login(result.access_token);
         this.router.navigate(['/secure']);
+        localStorage.setItem('currentUser', JSON.stringify({ email: formData.email }));
       },
       error => {
         console.log('error');

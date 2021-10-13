@@ -1,3 +1,9 @@
+<br>
+<div class="notlogged" *ngIf="!loggedIn">
+  <h1 routerLink="/">Login to access the product page</h1>
+</div>
+
+<div class="loggedin"  *ngIf="loggedIn">
 <h3 *ngIf="user"> Hello, {{user.first_name}} {{user.last_name}}</h3>
 <br>
 <div class="row, center">
@@ -35,4 +41,4 @@
     </mat-card>
     </div>
     </div>
-
+</div>

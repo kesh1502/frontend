@@ -1,4 +1,4 @@
-<mat-sidenav #rightSidenav mode="side"  class="rightSidenav" [fixedInViewport]="true" [fixedTopGap]="100" style="color: black;">
+<mat-sidenav #rightSidenav mode="side"  class="rightSidenav" [fixedInViewport]="true" [fixedTopGap]="100" style="color: black; margin-right: 20px;">
 	<br>
 	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:#b18976;" routerLink="/secure"> Home</h1>
 	<h1 style="font-size: 18px; font-family:Georgia, 'Times New Roman', Times, serif; color:#d1a28c;" routerLink="/products"> View Products</h1>
@@ -8,7 +8,7 @@
 		<mat-expansion-panel >
 			<mat-expansion-panel-header style="height:100px;">
 				<mat-panel-title>
-					<p style="color: rgb(219, 221, 223); font-style: italic; font-size: 18px;">{{user.first_name}} {{user.last_name}}</p>
+					{{user.first_name}} {{user.last_name}}
 				</mat-panel-title>
 			</mat-expansion-panel-header>
 			<hr>

@@ -3,7 +3,6 @@
   <h1 routerLink="/">Login to access the product page</h1>
 </div>
 <div class="edit"  *ngIf="loggedIn">
-  <div class="center">
     <table class="table">
         <thead>
           <tr>
@@ -29,6 +28,7 @@
     </table>
   </div>
 
+  <hr>
   <h1>Edit Product</h1>
   <div class="create-body">
       <div class="form-group">
@@ -49,6 +49,6 @@
       <button type="button" class="btn btn-primary" (click)="save()">Save</button> 
 
   </div>
-</div>
+
 
 

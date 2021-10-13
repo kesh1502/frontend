@@ -14,8 +14,6 @@ export class CreateproductComponent implements OnInit {
 
     public products = [] as any;
     public selectedProduct = <IProduct>{};
-    public modalTitle = '';
-    public btnTitle = '';
     public name = new FormControl('',Validators.required);
     public description = new FormControl('',Validators.required);
     public price = new FormControl('',Validators.required);

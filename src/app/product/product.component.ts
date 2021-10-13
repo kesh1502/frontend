@@ -19,6 +19,9 @@ export class ProductComponent implements OnInit {
   public description = new FormControl('',Validators.required);
   public price = new FormControl('',Validators.required);
   public showError = false;
+  items = [];
+  pageOfItems!: Array<any>;
+
   loggedIn: boolean=true;
 
   constructor(private service:ProductService,private userService: UserService) { }

@@ -8,9 +8,9 @@ import { navService } from '../nav/nav.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-   user:any;
+  user:any;
   loggedIn: boolean=true;
-  toggleActive!: boolean;
+  toggleActive: boolean=true;
   constructor(private userService: UserService,private sidenav: navService) {}
   
   ngOnInit(): void {

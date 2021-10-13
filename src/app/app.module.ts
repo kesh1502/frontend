@@ -22,7 +22,6 @@ import { RightSidenavComponent } from './right-sidenav/right-sidenav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { navService } from './nav/nav.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
