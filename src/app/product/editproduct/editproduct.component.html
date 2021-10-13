@@ -3,52 +3,48 @@
   <h1 routerLink="/">Login to access the product page</h1>
 </div>
 <div class="edit"  *ngIf="loggedIn">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name:</th>
-            <th scope="col">Description:</th>
-            <th scope="col">Price:</th>
-            <th scope="col">Action:</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let product of products; index as i">
-            <th scope="row">{{i+1}}</th>
-            <td>{{product.name}}</td>
-            <td>{{product.description}}</td>
-            <td>{{product.price}}</td>
-            <td>
-              <button type="button" class="btn btn-delete" (click)="delete(product)">Delete</button>
-              <button type="button" class="btn btn-update" (click)="update()">Edit</button>
-            </td>
-          </tr>
-        </tbody>
-    </table>
-  </div>
-
-  <hr>
-  <h1>Edit Product</h1>
-  <div class="create-body">
-      <div class="form-group">
-          <label for="exampleInputEmail1"></label>
-          <input type="text" class="form-control"  placeholder="Enter Product Name:" [formControl]="name">
-          <small *ngIf="name.errors?.required && showError"><b> *Name is required.</b></small>
+  <br>
+  <h1>Edit or Delete Products</h1>
+  <table id="example" class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price}}</td>
+          <td> <button type="button" class="btn-update" (click)="openModal(product)">Edit</button>
+            <button type="button" class="btn-delete" (click)="delete(product)">Delete</button></td>
+        </tr>
+      </tbody>
+  </table>
+ <hr>
+      <div class="modal-body">
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="Enter Product Name" [formControl]="name">
+            <small *ngIf="name.errors?.required && showError"><b> *Name is required.</b></small>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter Product Description" [formControl]="description">
+            <small *ngIf="description.errors?.required && showError"><b> *Description is required.</b></small>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" placeholder="Enter Product Price" [formControl]="price">
+            <small *ngIf="price.errors?.required && showError"><b> *Price is required.</b></small>
+        </div> 
+        <button type="button" class="btn-update" (click)="save()">Update</button> 
       </div>
-      <div class="form-group">
-          <label for="exampleInputEmail1"></label>
-          <input type="text" class="form-control" placeholder="Enter Product Description:" [formControl]="description">
-          <small *ngIf="description.errors?.required && showError"><b> *Description is required.</b></small>
-      </div>
-      <div class="form-group">
-          <label for="exampleInputEmail1"></label>
-          <input type="number" class="form-control" placeholder="Enter Product Price:" [formControl]="price">
-          <small *ngIf="price.errors?.required && showError"><b> *Price is required.</b></small>
-      </div> 
-      <button type="button" class="btn btn-primary" (click)="save()">Save</button> 
-
-  </div>
+      
+</div>
+  
 
 
 

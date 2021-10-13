@@ -1,12 +1,13 @@
 table {
   table-layout: auto;
-  width: 80%;
+  width: 90%;
   border-collapse: collapse;
   border: 2px solid rgba(31, 30, 43, 0.719);
   font-size: medium;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: auto;
   justify-content: center;
+  background-color: rgb(179, 204, 228);
 }
 
   thead th:nth-child(1) {
@@ -27,6 +28,10 @@ table {
   
   thead th:nth-child(5) {
     width: 25%;
+  }
+  
+  thead td:nth-child(0) {
+   background-color: dimgray;
   }
   
   th, td {

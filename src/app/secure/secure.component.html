@@ -12,7 +12,8 @@
         <mat-card-header>
         <mat-card-title>View Products</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://www.beedigital.es/wp-content/uploads/2020/09/mejores-gadgets-crecimiento-de-mercado-1.jpg" >
+        <img mat-card-image src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" tyle="width: 200px;
+        height: 300px;">
         <mat-card-content>
         <p>
             Choose to View Products to view all the products available as well as to delete or edit the product.
@@ -27,18 +28,37 @@
     <div class="column">
     <mat-card class="example-card">
         <mat-card-header>
-        <mat-card-title>Create Product</mat-card-title>
+        <mat-card-title>Edit Product</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://www.beedigital.es/wp-content/uploads/2020/09/mejores-gadgets-crecimiento-de-mercado-1.jpg">
+        <img mat-card-image src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" tyle="width: 200px;
+        height: 300px;">
         <mat-card-content>
         <p>
-            Choose to Create Product to create a product with its respective name, description and price.
+            Choose to Edit Product to edit the product's name, description and price  or delete a product displayed.
         </p>
         </mat-card-content>
         <mat-card-actions>
-        <button mat-button routerLink="/products/create">Create Product</button>
+        <button mat-button routerLink="/products/edit">Edit Product</button>
         </mat-card-actions>
     </mat-card>
     </div>
+
+    <div class="column">
+        <mat-card class="example-card">
+            <mat-card-header>
+            <mat-card-title>Create Product</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" tyle="width: 200px;
+        height: 300px;">
+            <mat-card-content>
+            <p>
+                Choose to Create Product to create a product with its respective name, description and price.
+            </p>
+            </mat-card-content>
+            <mat-card-actions>
+            <button mat-button routerLink="/products/create">Create Product</button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
     </div>
 </div>
