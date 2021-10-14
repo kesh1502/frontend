@@ -25,7 +25,7 @@ export class RightSidenavComponent implements OnInit {
      this.nav.setSidenav(this.sidenav);
    
      const headers = new HttpHeaders({Authorization: `Bearer ${localStorage.getItem('token')}`});
-     
+     localStorage.setItem('tokenID', 'token');
      console.log(localStorage.getItem('token'));
      this.http.get('http://localhost:8000/api/user', {headers}).subscribe(
        result => this.user = result,

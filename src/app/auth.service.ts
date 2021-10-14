@@ -1,14 +1,23 @@
 
-import { Injectable } from '@angular/core';
+import { Injectable, } from '@angular/core';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService  {
 
-  constructor() { }
-
+  constructor(private userService: UserService) { }
+ 
   isLoggedIn(): boolean {
-    return false;
+    const tken = localStorage.getItem('tokenID');
+    if (localStorage.getItem("token") === null) {
+      //...
+      return false;
+    }else{
+      return true;
+
+    }
+
   }
 }
